@@ -113,9 +113,6 @@ describe("Order repository test", () => {
     const orderRepository = new OrderRepository();
     await orderRepository.create(order);
 
-    order.removeItem('2')
-    //await orderRepository.update(order)
-
     const orderModel = await OrderModel.findOne({
       where: { id: order.id },
       include: ["items"],
