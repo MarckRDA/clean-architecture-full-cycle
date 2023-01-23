@@ -49,7 +49,7 @@ describe("E2E test for product", () => {
     expect(response2.status).toBe(200);
 
     const listResponse = await request(app).get("/product").send();
-    console.log(listResponse)
+    
     expect(listResponse.status).toBe(200);
     expect(listResponse.body.list.length).toBe(2);
 
